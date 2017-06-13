@@ -7,4 +7,4 @@
 ### 1.快速搭建后台界面
 >	首先我给大家看一看搭建后的图。
 ![搭建的后台首页](https://github.com/fanhua1994/dzadmin/blob/master/image/image_index.png?raw=true)
-[查看更多详细使用细节，请移步作者CSDN](http://blog.csdn.net/dong_18383219470?viewmode=list)
+[查看更多详细使用细节，请移步作者CSDN](http://blog.csdn.net/dong_18383219470/article/details/73182059)
