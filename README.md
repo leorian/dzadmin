@@ -3,3 +3,7 @@
 
 ## 三大功能
 >表格渲染、后台搭建、系统方法
+
+### 1.快速搭建后台界面
+>	首先我给大家看一看搭建后的图。
+![搭建的后台首页](https://github.com/fanhua1994/dzadmin/blob/master/image/image_index.png?raw=true)
