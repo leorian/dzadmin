@@ -1,0 +1,176 @@
+/***
+菜单相关
+***
+****/
+
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.in-sidebar li a{
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  text-decoration: none;
+  color: #444;
+  font-size: 13px;
+  padding-left:10px;
+}
+
+.in-sidebar li a:hover{
+	background:#fff;
+	color:#0099cc;
+}
+
+/*sidebar*/
+.sidebar{
+  width: 210px;
+  height: auto;
+  border-radius: 5px;
+  font: 14px '新宋体';
+  color: #f4f4f4;
+  background:#eeeeee;
+}
+.title{
+  width: 100%;
+  line-height: 32px;
+  border-bottom: 2px solid #e5e5e5;
+  background: #eeeeee;
+  cursor: pointer;
+  color:#434343;
+}
+.title > span{
+  margin-left: 10px;
+}
+/*in-sidebar*/
+.in-sidebar{
+  width: 100%;
+  display: none;
+}
+.in-sidebar > li{
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  border-bottom: 1px solid #ddd;
+  color:#444;
+}
+/*arrow*/
+.arrow{
+  float: right;
+  display: inline-block;
+  margin-right: 5px;
+  width: 20px;
+  height: 32px;
+  background: url(img/down.png) no-repeat center;
+  background-size:14px 14px;
+}
+.arrow-up{
+  background: url(img/up.png) no-repeat center;
+  background-size:14px 14px;
+}
+
+#nav{
+ background:#f5f5f5;
+ height:30px;
+ line-height:30px;
+ font-size:12px;
+ padding-left:20px;
+}
+
+#nav a{
+	text-decoration:none;
+	font-size:12px;
+	color:#0099cc;
+	display:inline-block;
+	width:auto;
+}
+
+#nav .nav_divider{
+	color:#ccc;
+	margin:4px;
+}
+
+/****
+本框架仅提供简单的后台模板。
+***/
+
+html,body{padding:0px;margin:0px;overflow-x: hidden; overflow-y: hidden;}
+
+#header{
+	background:black;
+	height:50px;
+	width:100%;
+}
+
+#header #header_name{
+	color:#fff;
+	display:inline-block;
+	line-height:50px;
+	margin-left:50px;
+}
+
+#header #header_user{
+	float:right;
+	color:#fff;
+	display:inline-block;
+	height:50px;
+	line-height:50px;
+	margin-right:20px;
+	font-size:12px;
+	cursor:pointer;
+	padding-right:20px;
+	background:url("img/user_down.png") no-repeat right center;
+	background-size:20px 20px;
+}
+
+#header #header_user:hover{
+	color:#444;
+}
+
+#header #header_menu{
+	z-index:9999;
+	position:absolute;
+	top:50px;
+	right:20px;
+	background:#ffffff;
+	padding:4px;
+	width:100px;
+	display:none;
+	border:1px solid #f2f2f2;
+}
+
+#header #header_menu a{
+	display:block;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	width:100%;
+	font-size:14px;
+	text-decoration:none;
+	border-bottom:1px solid #f2f2f2;
+	color:#444;
+}
+
+#header #header_menu a:hover{
+	color:#96a0de;
+}
+
+#left{
+	float:left;
+	width:210px;
+	height:100%;
+	background:#eeeeee;
+}
+
+
+#right{
+	float:left;
+	width:200px;
+	height:100%;
+}
+
+#iframe{
+	width:100%;
+	border:none;
+}

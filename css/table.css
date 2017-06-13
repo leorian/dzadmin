@@ -1,0 +1,97 @@
+
+/**********表格**************/
+#table #table_data{
+	width:100%;
+}
+
+th {  
+    font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;  
+    color: #4f6b72;  
+    border-right: 1px solid #C1DAD7;  
+    border-bottom: 1px solid #C1DAD7;  
+    border-top: 1px solid #C1DAD7;  
+    letter-spacing: 2px;  
+    text-transform: uppercase;  
+    text-align: center;
+	height:40px;
+	line-height:40px;
+    background: #CAE8EA;  
+} 
+  
+td {  
+    border-right: 1px solid #C1DAD7;  
+    border-bottom: 1px solid #C1DAD7; 
+    padding: 6px 6px 6px 12px;  
+    color: #4f6b72;  
+	min-width:50px;
+	max-width:50%;
+	text-align:center;
+} 
+
+td:nth-child(1){
+	border-left: 1px solid #C1DAD7;  
+    border-top: 0;    
+    font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+}
+
+tr:nth-child(odd)
+{
+	background:#F9F9F9;
+}
+tr:nth-child(even)
+{
+	background:#ffffff;
+}
+
+tr:hover{
+	background:#F9F9F9;
+}
+ 
+
+#table #table_loading{
+	text-align:center;
+	margin:5px;
+}
+
+
+#pager{
+	clear:both;
+}
+
+#pager a{
+	color:#444;
+}
+
+
+#pager a:hover{
+	background:#ddd;
+	color:#fff;
+}
+
+#pager a{
+	border:1px solid #a17ef1;
+	display:inline-block;
+	padding:4px;
+	text-align:center;
+	text-decoration:none;
+	margin:2px;
+	min-width:40px;
+	color:#a17ef1;
+}
+
+#pager span{
+	display:inline-block;
+	min-width:40px;
+	color:#ccc;
+	padding:4px;
+	margin:2px;
+	text-align:center;
+	border:1px solid #a17ef1;
+}
+
+
+#table_toolbar{
+height:50px;
+line-height:50px;
+margin-left:20px;
+}

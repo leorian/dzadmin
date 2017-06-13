@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+   <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/table.css" />
+ 
+  <script src="js/jquery-3.2.1.min.js"></script>
+  
+  
+  <title></title>
+ </head>
+ <body>
+
+   <div id="table">
+		  <div id="table_toolbar">
+			<!-- http://www.runoob.com/try/demo_source/bootstrap3-glyph-icons.htm   菜单图标定义 -->
+			<button type="button" class="btn btn-default btn-sm" id="table_delete_btn">
+				<span class="glyphicon glyphicon-trash"></span> 导出数据
+			</button>
+
+			<button type="button" class="btn btn-default btn-sm" id="table_mod_btn">
+				<span class="glyphicon glyphicon-pencil"></span> 编辑案列
+			</button>
+		  </div>
+		  <table id="table_data" data-url="data.json" data-extra-param="dongzhiping=1111" data-toolbar-onclick="true">  
+			  <tr id="table_header"> 
+				<th data-name="checkbox">操作</th>
+				<th data-name="id">ID</th>  
+				<th data-name="name">名称</th>  
+				<th data-name="price">价格</th>
+				<th data-name="image" data-function="imageController">图片</th>
+			  </tr>  
+		</table>  
+		<div id="table_loading">正在加载数据..</div>
+		<div id="pager"></div>
+	</div>
+
+<script src="js/table.js"></script>
+<script>
+	//复写ToolBarOnClick方法 获得点击事件
+	function ToolBarOnClick(index){
+		alert("执行了点击方法");
+	}
+
+	//渲染图片显示的方法
+	function imageController(value){
+		return "<img src='"+ value +"' />";
+	}
+	
+</script>
+ </body>
+</html>

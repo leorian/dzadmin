@@ -1,0 +1,417 @@
+﻿body,html,h1,h2,h3,h4,h5,form{
+padding:0px;
+margin:0px;
+}
+
+*{
+font-size:14px;
+}
+
+
+a{
+    text-decoration:none;
+}
+/*异步数据*/
+.load{
+  background:url(system_images/load.gif) no-repeat center left;
+  height:30px;
+  line-height:30px;
+  background-size:24px;
+  padding:4px;
+}
+/*浮动问题*/
+   .fl{
+       float:left;
+   }
+
+   .fr{
+       float:right;
+   }
+
+    .fb{
+       clear:both;
+	}
+/*图片预览器*/
+
+   #imageView{
+      position:fixed;
+	  top:50px;
+	  right:0px;
+	  border:2px solid #FFEEEE;
+	  border-radius:2px;
+	  width:340px;
+	  height:500px;
+	  z-index:99;
+	  background:#fff;
+   }
+   #imageView img{
+	  margin:auto;
+	  width:100%;
+	  border-radius:2px;
+   }
+
+   /*拖动时的CSS*/
+   .moveCursor{
+       cursor:move;
+   }
+/*主要CSS*/
+#mask_layer{
+	background-color:#000;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=50)";  
+	filter: alpha(opacity=50);  
+	-moz-opacity: 0.5;  
+	-khtml-opacity: 0.5;  
+	opacity: 0.5; 
+	z-index:1000;
+	position:fixed;
+	_position:absolute; /*IE6*/
+	top:0;left:0;
+	width:100%;height:100%;	
+}
+#scs_alert{
+	position:fixed;
+	_position:absolute; /*IE6*/
+	z-index:1001;
+	top:50%;left:50%;
+	margin-left:-144px;
+	margin-top:-76px;
+	text-align:left;
+	width:289px;
+}
+#alert_top{height:20px;background:url(system_images/scs_alert.png) no-repeat 0 -73px}
+#alert_bg{background:url(system_images/scs_bg.png) repeat-y 0 0;text-align:center;*+height:1%}
+#alert_bg:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+#alert_foot{height:13px;background:url(system_images/scs_alert.png) no-repeat 0 -93px}
+
+#confirm_ok,#confirm_cancel,#alert_ok{
+	width:89px;
+	height:32px;
+	display:block;
+	float:left;
+	text-align:center;
+	overflow:hidden;
+	text-decoration:none;
+	line-height:30px;
+	margin:5px 10px 5px 0;
+	background:url(system_images/scs_alert.png) no-repeat 0 -39px;
+	color:#fff;
+	font-family:微软雅黑,宋体;
+	font-size:16px;
+}
+#confirm_ok{margin-left:47px;_margin-left:25px;}
+#alert_ok{margin-left:97px;_margin-left:50px;}
+#confirm_ok:hover,#confirm_cancel:hover,#alert_ok:hover{background-position:-89px -39px}
+#confirm_ok:active,#confirm_cancel:active,#alert_ok:active{background-position:-178px -39px}
+#inco_ok,#inco_warn,#inco_error,#inco_confirm{
+	width:37px;height:37px;
+	background:url(system_images/scs_alert.png) no-repeat 0 0;
+}
+#inco_error{background-position:-41px 0}
+#inco_warn{background-position:-82px 0}
+#inco_confirm{background-position:-123px 0}
+#alert_txt{
+	text-align:left;
+	color:#fff;
+	font-family:微软雅黑,宋体;
+	font-size:16px;
+	padding-left:10px;
+}
+img, div,a { _behavior: url(system_images/iepngfix.htc) }/*解决IE6透明*//*
+/*弹窗时不可操作的CSS*/
+#Boxstyle{
+background-color:#302929;
+ position:absolute;
+ z-index:99;
+ left:0;
+ top:0;
+ display:none;
+ width:100%;
+ height:100%;
+ opacity:0.3;
+ filter: alpha(opacity=30);
+ -moz-opacity: 0.3;
+ }
+/*弹窗样式*/
+#tishi{
+display:none;
+position:fixed;
+z-index:10;
+top:30%;
+left:37%;
+width:150px;
+border:10px solid #F1D7D7;
+background:#F8FAFC url(./system_images/icon_tishi.png) no-repeat 10px center;
+background-size:30px;
+padding:6px;
+padding-left:40px;
+height:40px;
+line-height:40px;
+
+border-radius:6px;
+text-align:center;
+font-weight:bold;
+color:#FF0055;
+}
+/*弹窗样式*/
+#BoxWindow{
+margin:0px auto;
+   position:fixed;
+   top:20%;
+   left:36%;
+   width:300px;
+   height:150px;
+   border:1px solid #c2c2c2;
+   border-radius:6px;
+   z-index:1100;
+   color:#000000;
+   font-weight:bolder;
+   background:#F1F1F1;
+   display:none;
+}
+
+#BoxWindow h1{
+   background:#000000;
+   color:#FFFFFF;
+   margin:0px;
+   padding:0px;
+   text-align:center;
+   font-size:20px;
+   height:40px;
+   line-height:40px;
+   border-radius:6px 6px 0px 0px;
+}
+
+#BoxWindow span{
+  float:right;
+  position:absolute;
+  top:80%;
+  left:30%;
+}
+#BoxWindow b{
+  color:#ff0000;
+}
+/*弹出广告，公告!*/
+#notification{
+position:fixed;
+border:1px solid #c3c3c3;
+width:300px;
+height:160px;
+background:#FAE2D5;
+right:0px;
+bottom:0px;
+text-indent:2px;
+display:none;
+}
+/*关闭按钮*/
+#notificationClose{
+    float:right;
+	margin-right:5px;
+	 color:#FF0000;
+}
+
+#notification h1{
+margin:0px;
+padding-left:10px;
+font-size:16px;
+color:#000000;
+font-weight:bolder;
+background:#F8EADF;
+height:30px;
+line-height:30px;
+border-bottom:2px solid #D75A5A;
+cursor:pointer;
+}
+/*弹出popup*/
+#alert{
+    position:fixed;
+	top:100px;
+	left:46%;
+	background:#242424;
+	color:#fff;
+	font-weight:bold;
+	padding:6px;
+	border-radius:6px;
+	font-size:13px;
+	opacity:0.9;
+    filter:alpha(opacity=90);
+}
+/*返回顶部*/
+#top{
+   background:url(system_images/icon_top.png);
+   position:fixed;
+   right:20px;
+   width:46px;
+   background-size:46px;
+   height:46px;
+   bottom:20px;
+   cursor:pointer;
+}
+
+#back{
+   background:url(system_images/icon_back.png) no-repeat center center;
+   position:fixed;
+   left:30px;
+   bottom:20px;
+   width:46px;
+   height:46px;
+   background-size:46px;
+   border-radius:25px;
+}
+
+#prompt{ 
+    position:fixed;
+	top:200px;
+	left:40%;
+    width:260px;
+	height:156px;
+	border:6px solid #c5c5c5;
+	border-radius:6px;
+	z-index:1001;
+	background:#fff;
+}
+
+#prompt h1{
+background:#F2D8D8;
+  margin:0px;
+  padding:0px;
+  font-size:14px;
+  height:30px;
+  line-height:30px;
+  padding-left:5px;
+  border-bottom:2px solid #CE5757;
+  cursor:move;
+}
+
+#prompt textarea{
+width:98%;
+height:80px;
+resize:none;
+}
+
+#prompt span{
+   float:right;
+   display:inline-block;
+   height:20px;
+   width:40px;
+   text-align:center;
+   line-height:20px;
+   padding:2px;
+   border:2px solid #C16868;
+   border-radius:4px;
+   margin-right:10px;
+   cursor:pointer;
+}
+
+#prompt span:hover{
+	background:#C16868;
+	color:#fff;
+}
+
+
+.nav_title{
+     border:0px;
+	border-top:2px solid #0072BC;
+	background:#F2F6FB;
+	height:28px;
+	line-height:28px;
+	color:#888;
+	margin-bottom:4px;
+}
+/*
+   <div class="nav_title"><span>当前位置：</span><span><a href="__ROOT__/web.php">首页</a></span>><span><a href="__URL__/index">客房预定</a></span>><span><{$data.name}></span></div>
+*/
+
+#pager{
+    margin:6px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+}
+#pager a{
+    border:1px solid #D7DBDC;
+    display:inline-block;
+    height:24px;
+    line-height:24px;
+    text-align:center;
+    padding:4px 6px;
+    background:#F6FFFF;
+    text-decoration:none;
+    color:#404548;
+    margin:2px;
+    min-width:30px;
+}
+
+#pager a:hover{
+    border:1px solid #CFB669;
+    background:#72B939;
+    color:#fff;
+}
+
+.window{
+	z-index:100;
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:500px;
+	margin-left:-250px;
+	margin-top:-150px;
+	background:#fff;
+	border:5px solid #F2E1E1;
+	display:none;
+	padding:10px;
+	min-height:100px;
+}
+
+.window .window_close{
+cursor:pointer;
+float:right;
+display:block;
+width:30px;
+height:30px;
+background:#C74C39 url(./system_images/icon_close.png) no-repeat center center;
+background-size:20px;
+}
+
+.window .window_title{
+	height:40px;
+	width:100%;
+	line-height:40px;
+	border-bottom:2px solid #C74C39;
+	font-size:20px;
+	color:#C74C39;
+	margin-bottom:10px;
+}
+
+.window button{
+	display:block;
+	height:30px;
+	width:70px;
+	border-radius:2px;
+	background:#C74C39;
+	border:0px;
+	color:#fff;
+	cursor:pointer;
+	margin-top:50px;
+	margin:left:20px;
+}
+
+
+
+.sbtn{
+	width:80px;
+	text-align:center;
+	border-radius:6px;
+	color:#fff;
+	background:#0099CC;
+	height:30px;
+	line-height:30px;
+	border:none;
+	cursor:pointer;
+}
+
+/**
+<div id="share" class="window">
+    <span class="window_close"></span>
+    <div class="window_title">微信分享</div>
+    <img src="/Public/img/zhiweism_qrcode.jpg" />
+</div>**/
