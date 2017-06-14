@@ -274,7 +274,8 @@ function Table(url,data_extra_param){
 
 	api_url = url;
 	loading.show().text("正在加载数据..");
-	$.getJSON(url+"?limit="+ page_limit +"&"+ page_name +"="+page+"&random="+Math.random()+data_extra_param,function(json,status){
+	$.get(url+"?limit="+ page_limit +"&"+ page_name +"="+page+"&random="+Math.random()+data_extra_param,function(json,status){
+		json = eval("("+ json +")");
 		data = json["rows"];
 		page_count = json["total"];
 
