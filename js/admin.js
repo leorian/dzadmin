@@ -1,10 +1,11 @@
 var mTitle = null;
-var title = $('.sidebar .title');
-var con = $('.title > ul');
-var link = $(".in-sidebar li a");
-var nav_first = $("#nav_first");
-var nav_second = $("#nav_second");
-var iframe = $("#iframe");
+var title;
+var con;
+var link;
+var nav_first;
+var nav_second;
+var iframe;
+var iframe_refresh;
 var tmp = null;
 
 function initWindow(){
@@ -25,6 +26,9 @@ $(document).ready(function(){
 	nav_first = $("#nav_first");
 	nav_second = $("#nav_second");
 	iframe = $("#iframe");
+	iframe_refresh = $("#iframe_refresh");
+
+	iframe_refresh.attr("src","css/img/refresh.png")
 
 
 	$("#header_user").mouseover(function(){
@@ -33,6 +37,11 @@ $(document).ready(function(){
 
 	$("#header_user").mouseout(function(){
 		$("#header_menu").hide();
+	});
+
+
+	iframe_refresh.click(function(){
+		refresh();
 	});
 
 
@@ -77,6 +86,11 @@ $(document).ready(function(){
 //=====菜单相关的操作======================
 function open(url){
 	iframe.attr("src",url);
+}
+
+function refresh(){
+	var src = iframe.attr("src");
+	open(src);
 }
 
 

@@ -309,10 +309,10 @@ $("#table_header th:eq(0)").click(function(){
 		}
 
 		if(all_check){
-			child.removeAttr("checked");
+			child.attr("checked",false);
 			all_check = false;
 		}else{
-			child.attr("checked","true");
+			child.attr("checked",true);
 			all_check = true;
 		}	
 	}
