@@ -28,7 +28,7 @@ $(document).ready(function(){
 	iframe = $("#iframe");
 	iframe_refresh = $("#iframe_refresh");
 
-	iframe_refresh.attr("src","css/img/refresh.png")
+	iframe_refresh.attr("src","../css/img/refresh.png")
 
 
 	$("#header_user").mouseover(function(){

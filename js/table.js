@@ -162,12 +162,12 @@ function ToolBarOnClick(index){
 }
 
 
-$("#table_toolbar button").click(function(){
-	if(typeof(toolbar_onclick)  != "undefined" && toolbar_onclick == "true"){
-		var index = $(this).index();
-		ToolBarOnClick(index);
-	}
-});
+if(typeof(toolbar_onclick)  != "undefined" && toolbar_onclick == "true"){
+	$("#table_toolbar button").click(function(){
+			var index = $(this).index();
+			ToolBarOnClick(index);
+	});
+}
 
 
 //清空表数据
